@@ -1,13 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Azuay Living</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Azuay Living offers comfortable, well-maintained homes in Cuenca and the Yunguilla Valley." />
+  <title>Azuay Living | Comfortable Homes in Cuenca & Yunguilla</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Azuay Living</h1>
-  <p>Carefully managed homes in Cuenca and Yunguilla.</p>
-  <p>Our new website is coming soon.</p>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Azuay Living home">
+        <span>AZUAY</span>
+        <span>LIVING</span>
+      </a>
+
+      <button class="menu-button" aria-expanded="false" aria-controls="main-nav">
+        Menu
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
+        <a href="#available">Available Home</a>
+        <a href="#why">Why Azuay Living</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Cuenca &amp; Yunguilla</p>
+        <h1>Comfortable homes.<br />Thoughtfully managed.</h1>
+        <p class="hero-copy">
+          Well-maintained homes in strategic locations, presented honestly
+          and managed with clear communication, responsiveness, and fairness.
+        </p>
+        <a class="button button-primary" href="#available">View available home</a>
+      </div>
+    </section>
+
+    <section id="available" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow dark">Available now</p>
+          <h2>Quiet furnished condo near Supermaxi Las Américas</h2>
+        </div>
+
+        <article class="property-card">
+          <div class="property-image placeholder-image" role="img" aria-label="Condo 303 living room photograph placeholder">
+            <span>Replace with your best living-room photograph</span>
+          </div>
+
+          <div class="property-content">
+            <p class="location">Cuenca · Condo 303</p>
+            <h3>A comfortable home in one of Cuenca’s most convenient neighborhoods.</h3>
+
+            <div class="facts" aria-label="Property facts">
+              <span><strong>2</strong> bedrooms</span>
+              <span><strong>2.5</strong> bathrooms</span>
+              <span><strong>82 m²</strong> interior</span>
+              <span><strong>$595</strong> per month</span>
+            </div>
+
+            <p>
+              Tastefully furnished, elevator access, high-speed fiber internet,
+              southern mountain views toward Turi, and everyday shopping and the
+              Tranvía just steps away.
+            </p>
+
+            <a class="text-link" href="condo-303.html">Explore Condo 303 →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="why" class="section section-warm">
+      <div class="container">
+        <div class="section-heading narrow">
+          <p class="eyebrow dark">Why Azuay Living</p>
+          <h2>A straightforward rental experience.</h2>
+          <p>
+            Our properties are honestly represented, maintained responsibly,
+            and managed with clear communication and mutual respect.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <article>
+            <h3>Honest representation</h3>
+            <p>Clear descriptions, useful photographs, and practical details help you decide whether a home is right for you.</p>
+          </article>
+          <article>
+            <h3>Responsive ownership</h3>
+            <p>Legitimate maintenance issues receive professional attention, while routine care remains a shared responsibility.</p>
+          </article>
+          <article>
+            <h3>Fair treatment</h3>
+            <p>We aim for clear expectations, reasonable decisions, and a respectful relationship throughout the tenancy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section story-section">
+      <div class="container story-grid">
+        <div>
+          <p class="eyebrow dark">A place to call home</p>
+          <h2>Comfort for everyday living.</h2>
+        </div>
+        <div>
+          <p>
+            Azuay Living focuses on homes that feel cared for rather than
+            over-staged: warm materials, natural light, practical furnishings,
+            and locations that make daily life easier.
+          </p>
+          <p>
+            Our goal is simple: help you understand the property clearly,
+            imagine yourself living there, and know what to expect from us.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Interested in Condo 303?</h2>
+          <p>Ask a question or arrange a viewing.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-light" href="https://wa.me/593999019832">WhatsApp Erika</a>
+          <a class="button button-outline-light" href="tel:+593939542394">Call Roland</a>
+        </div>
+        <div class="contact-details">
+          <p><strong>Erika</strong> · English / Español · 099-901-9832</p>
+          <p><strong>Roland</strong> · English · 093-954-2394</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Azuay Living</p>
+      <p>Comfortable, well-maintained homes in Cuenca and Yunguilla.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const nav = document.querySelector('.main-nav');
+
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
