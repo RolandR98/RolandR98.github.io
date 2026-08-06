@@ -1,15 +1,23 @@
-AZUAY LIVING — READY-TO-PUBLISH VERSION WHILE PHOTOS ARE PENDING
+AZUAY LIVING WEBSITE — VERSION 1
 
-Upload these items to the ROOT of the RolandR98.github.io repository:
-- index.html
-- condo-303.html
-- style.css
-- the complete assets folder
+Main files:
+- index.html: homepage
+- condo-303.html: detailed property page
+- style.css: all site styling
+- images/: website photographs
 
-GitHub steps:
-1. In the repository, choose Add file > Upload files.
-2. Drag the three files and the assets folder into the upload area.
-3. Commit directly to the main branch.
-4. Wait one or two minutes and refresh https://rolandr98.github.io
+To preview:
+Double-click index.html. For the best preview, keep all files in this folder structure.
 
-This version is deliberately complete enough to publish. Photo placeholders are clearly identified and can later be replaced without restructuring the site.
+To publish with GitHub Desktop:
+1. Replace the files in your existing AzuayLiving repository with these files.
+2. Open GitHub Desktop.
+3. Review the changed files.
+4. Enter a commit message such as: Publish Condo 303 website upgrade
+5. Click Commit to main.
+6. Click Push origin.
+7. Allow GitHub Pages a few minutes to update.
+
+Contact links currently use:
+WhatsApp: +593 93 954 2394
+Email: roland531@gmail.com
